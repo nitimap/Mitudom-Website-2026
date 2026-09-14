@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PhotoSlot } from '@/components/PhotoSlot';
 import { OpenHouseAction, VisitButton } from '@/components/EnrollmentActions';
 
@@ -10,14 +11,16 @@ const promises = [
 
 export default function Home() {
   return <main id="main">
-    <section className="hero">
-      <div className="container hero-copy">
+    <section className="hero container">
+      <div className="hero-copy">
         <p className="hero-intro">Mitudom Kindergarten <span>·</span> Happy Childhood. Ready for What’s Next.</p>
         <h1><span className="headline-phrase">เติบโตอย่างมีความสุข</span>{' '}<em className="headline-phrase">พร้อมสำหรับก้าวต่อไป</em></h1>
         <p className="hero-lead">ช่วงเวลาแรกของการเรียนรู้ ควรเต็มไปด้วยความสุข ความเข้าใจ และพื้นที่ให้เด็กได้เป็นตัวเอง</p>
         <div className="actions"><VisitButton /><OpenHouseAction /></div>
       </div>
-      <PhotoSlot className="hero-photo" ratio="wide" label="ภาพหลัก · ชีวิตในห้องเรียน" description="เด็กกำลังเรียนรู้อย่างเป็นธรรมชาติ โดยมีครูอยู่ใกล้ ๆ" />
+      <div className="hero-photo">
+        <Image src="/images/home/hero-puppet-teacher-edited.png" alt="ครูและเด็ก ๆ เรียนรู้ร่วมกันผ่านการเล่นหุ่นมือในห้องเรียน" fill priority sizes="(min-width: 1000px) 54vw, (min-width: 761px) 85vw, 100vw" />
+      </div>
     </section>
 
     <section id="approach" className="belief section container"><div className="section-side"><span className="rule-label">สิ่งที่เราเชื่อ</span></div><div><h2><span className="headline-phrase">วัยอนุบาลไม่ใช่ช่วงที่ต้องรีบ</span>{' '}<span className="headline-phrase">แต่เป็นช่วงที่ต้องวางพื้นฐานให้ดี</span></h2><p className="large-copy">เมื่อเด็กได้ใช้เวลาเล่น สำรวจ ลองผิดลองถูก และเรียนรู้ร่วมกับคนรอบตัว สิ่งสำคัญค่อย ๆ เติบโตไปพร้อมกับเขา</p></div></section>
