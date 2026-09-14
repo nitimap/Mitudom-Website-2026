@@ -14,13 +14,13 @@ export function Header() {
         <span><strong>โรงเรียนอนุบาลมิตรอุดม</strong><small>Mitudom Kindergarten</small></span>
       </Link>
       <nav className="desktop-nav" aria-label="เมนูหลัก">
-        {links.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+        {links.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
       </nav>
       <Link className="button button--small header-cta" href="/#visit">นัดเยี่ยมชมโรงเรียน <span aria-hidden="true">↗</span></Link>
       <details className="mobile-menu">
         <summary aria-label="เปิดเมนู">เมนู <span aria-hidden="true">☰</span></summary>
         <nav aria-label="เมนูมือถือ">
-          {links.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+          {links.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
           <Link className="button" href="/#visit">นัดเยี่ยมชมโรงเรียน ↗</Link>
         </nav>
       </details>
