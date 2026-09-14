@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { VisitButton } from './EnrollmentActions';
 
 const links = [
@@ -11,7 +12,7 @@ export function Header() {
   return <header className="site-header">
     <div className="header-inner container">
       <Link className="brand" href="/" aria-label="โรงเรียนอนุบาลมิตรอุดม หน้าหลัก">
-        <span className="brand-symbol" aria-hidden="true">ม</span>
+        <span className="brand-mark"><Image src="/images/logo.png" alt="" width={56} height={56} priority /></span>
         <span><strong>โรงเรียนอนุบาลมิตรอุดม</strong><small>Mitudom Kindergarten</small></span>
       </Link>
       <nav className="desktop-nav" aria-label="เมนูหลัก">
