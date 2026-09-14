@@ -1,13 +1,25 @@
 # Mitudom Kindergarten — Design system
 
 ## Status
-Working design direction distilled from the supplied brief. No separate visual design system or brand assets were attached. Replace these inferred tokens with approved brand specifications when provided.
+This file is the source of truth for the approved website palette. The colors below were supplied by the school on 14 September 2026. Do not introduce new brand colors. The photography and logo remain placeholders until school assets are provided.
 
 ## Visual direction
 An inviting school visit in clear daylight: calm, observant, and centered on real children. Use an editorial story rhythm, large photography, unhurried whitespace, and direct typography. Avoid repeated card grids, badges, decorative gradients, and competing illustration.
 
-## Colors
-Centralized CSS tokens in `app/globals.css`. Current working palette: clean white, deep ink, coral-red primary, pale blush, and a restrained leaf green. Red is used mainly for action and small emphases. Color values are provisional, not an assertion of existing school brand colors.
+## Approved brand palette
+| Role | Name | Value | Use |
+| --- | --- | --- | --- |
+| Primary Brand | Deep Navy | `#1F3B6D` | Main headings, primary CTA, links, dark brand surfaces |
+| Primary Light | Sky Blue | `#D6ECFF` | Selected section and photography-placeholder surfaces |
+| Primary Neutral | Warm Cream | `#FFF9EE` | Calm section backgrounds |
+| Base | White | `#FFFFFF` | Main page surface and button text on navy |
+| Accent | Pastel Pink | `#FFD6E7` | Limited small supporting accents |
+| Accent | Mint | `#D8F3E1` | Limited small supporting accents |
+| Accent | Sunshine Yellow | `#FFE68A` | Limited small supporting accents |
+| Text | Charcoal | `#4B5563` | Body and supporting text |
+| Text | Soft Gray | `#9CA3AF` | Subtle rules and nonessential decorative detail only; not body copy |
+
+All UI color values must originate from centralized CSS tokens in `app/globals.css`. State treatments may use transparency derived from these tokens, but must not introduce another brand hue. Primary CTA buttons use Deep Navy with White text. Main headings use Deep Navy, except headings on Deep Navy surfaces, which use White. Page backgrounds are mainly White and Warm Cream, with one selected Sky Blue section. Pink, Mint, and Yellow together should occupy no more than roughly 10–15% of visible area; they need not all be used. Avoid gradients.
 
 ## Typography
 Thai-first system font stack for reliable glyph rendering and minimal loading cost. Large headings use strong but calm weight, balanced wrapping, and generous line height. English is limited to the school name, approved promise, framework words, and occasional small labels.
@@ -20,7 +32,7 @@ Thai-first system font stack for reliable glyph rendering and minimal loading co
 - Header, photo slot, CTA, and footer are reusable where they truly repeat.
 
 ## Tokens
-Define color, font, radius, spacing, shadow, and transition duration in one CSS layer. Use subtle motion and disable nonessential transitions for reduced-motion users.
+Define color, font, radius, spacing, shadow, and transition duration in one CSS layer. Do not put arbitrary color literals in components or section rules. Use subtle motion and disable nonessential transitions for reduced-motion users.
 
 ## Photography
 Use labeled local placeholder slots only, with a descriptive replacement brief and aspect ratio. No remote stock imagery. Final photography should be candid, consent-cleared school images showing learning, care, environment, readiness, family partnership, history, and arrival.
