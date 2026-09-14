@@ -143,10 +143,6 @@ p { max-width: 70ch; text-wrap: pretty; }
 .photo-slot--portrait { aspect-ratio: 4 / 5; }
 .photo-slot--square { aspect-ratio: 1; }
 .photo-slot__mark { position: absolute; top: 9%; right: 10%; color: var(--brand-navy); font-size: clamp(4rem, 11vw, 11rem); font-weight: 200; line-height: 1; opacity: .16; }
-.photo-slot__content { display: flex; flex-direction: column; gap: .2rem; position: relative; z-index: 1; max-width: 36rem; padding: 1rem 1.25rem; border-radius: var(--radius-sm); background: var(--base-white); }
-.photo-slot__content strong { color: var(--brand-navy); font-size: clamp(1rem, 1.5vw, 1.35rem); line-height: 1.4; }
-.photo-slot__content span { font-size: .9rem; line-height: 1.5; }
-.photo-slot__content small { color: var(--text-charcoal); font-size: .72rem; }
 .rule-label { display: inline-block; color: var(--brand-navy); font-size: .86rem; font-weight: 700; }
 
 .belief { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
@@ -181,7 +177,6 @@ p { max-width: 70ch; text-wrap: pretty; }
 .partnership { background: var(--brand-sky); }
 .partnership-inner { display: grid; grid-template-columns: 1fr .75fr; gap: clamp(3rem, 10vw, 9rem); align-items: center; }
 .partnership .photo-slot { background: var(--brand-cream); }
-.content-note { padding-top: 1rem; border-top: 1px solid var(--line-subtle); font-size: .85rem !important; }
 .heritage { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 7vw, 7rem); }
 .heritage > * { min-width: 0; }
 .heritage-number { display: block; color: var(--brand-navy); font-size: clamp(7rem, 16vw, 15rem); font-weight: 800; line-height: 1; letter-spacing: -.06em; }
@@ -193,7 +188,6 @@ p { max-width: 70ch; text-wrap: pretty; }
 .visit h2 { font-size: clamp(2.25rem, 4vw, 4.2rem); }
 .visit .actions { justify-content: flex-start; }
 .visit .photo-slot { background: var(--brand-sky); }
-.visit [aria-disabled="true"] { cursor: not-allowed; }
 .button--light { background: var(--brand-navy); color: var(--base-white); }
 .button--light:hover { box-shadow: 0 0 0 3px var(--brand-sky); }
 .text-link--light { color: var(--brand-navy); }
@@ -261,7 +255,6 @@ p { max-width: 70ch; text-wrap: pretty; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-inner > div:first-child { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
-  .photo-slot__content { padding: .75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
