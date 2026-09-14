@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { VisitButton } from './EnrollmentActions';
 
 const links = [
   ['หน้าหลัก', '/'], ['แนวทางของเรา', '/#approach'], ['หลักสูตร', '/#learning'],
@@ -16,12 +17,12 @@ export function Header() {
       <nav className="desktop-nav" aria-label="เมนูหลัก">
         {links.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
       </nav>
-      <Link className="button button--small header-cta" href="/#visit">นัดเยี่ยมชมโรงเรียน <span aria-hidden="true">↗</span></Link>
+      <VisitButton className="button button--small header-cta" />
       <details className="mobile-menu">
         <summary aria-label="เปิดเมนู">เมนู <span aria-hidden="true">☰</span></summary>
         <nav aria-label="เมนูมือถือ">
           {links.map(([label, href]) => <Link href={href} key={label}>{label}</Link>)}
-          <Link className="button" href="/#visit">นัดเยี่ยมชมโรงเรียน ↗</Link>
+          <VisitButton />
         </nav>
       </details>
     </div>
