@@ -3,10 +3,10 @@ import { PhotoSlot } from '@/components/PhotoSlot';
 import { OpenHouseAction, VisitButton } from '@/components/EnrollmentActions';
 
 const promises = [
-  { word: 'HAPPY', th: 'มีความสุข', text: 'ได้เล่น สำรวจ และเติบโตในจังหวะของตัวเอง' },
-  { word: 'CARED', th: 'ได้รับการดูแล', text: 'ห้องเรียนไม่เกิน 25 คน มีครูประจำชั้นและพี่เลี้ยงอย่างละ 1 คน เพื่อมองเห็นและติดตามเด็กแต่ละคนอย่างใกล้ชิด' },
-  { word: 'SAFE', th: 'รู้สึกปลอดภัย', text: 'CCTV ระบบป้องกันอัคคีภัยครบวงจร และเครื่องฟอกอากาศ ดูแลควบคู่กับบันไดและราวจับสำหรับเด็ก พื้นกันกระแทก และวัสดุป้องกันมุมเสา' },
-  { word: 'READY', th: 'พร้อมก้าวต่อไป', text: 'ค่อย ๆ ปูพื้นฐานตั้งแต่ อ.1 โดยไม่เร่งอ่านเขียน ให้เด็กได้เรียนรู้วิชาการผ่านการลงมือทำ คิด สื่อสาร ฝึกทักษะชีวิตและความรับผิดชอบ' },
+  { word: 'HAPPY', th: 'มีความสุขกับการเรียนรู้', text: 'ได้เล่น สำรวจ และเติบโตในจังหวะของตัวเอง' },
+  { word: 'CARED', th: 'ดูแลใกล้ชิด เข้าใจเด็กแต่ละคน', text: 'ห้องเรียนไม่เกิน 25 คน มีครูประจำชั้นและพี่เลี้ยงอย่างละ 1 คน เพื่อมองเห็นและติดตามเด็กแต่ละคนอย่างใกล้ชิด' },
+  { word: 'SAFE', th: 'พื้นที่ที่คิดจากมุมมองของเด็กเล็ก', text: 'CCTV ระบบป้องกันอัคคีภัยครบวงจร และเครื่องฟอกอากาศ ดูแลควบคู่กับบันไดและราวจับสำหรับเด็ก พื้นกันกระแทก และวัสดุป้องกันมุมเสา' },
+  { word: 'READY', th: 'เติบโตพร้อมสำหรับก้าวต่อไป', text: 'ค่อย ๆ ปูพื้นฐานตั้งแต่ อ.1 โดยไม่เร่งอ่านเขียน ให้เด็กได้เรียนรู้วิชาการผ่านการลงมือทำ คิด สื่อสาร ฝึกทักษะชีวิตและความรับผิดชอบ' },
 ];
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
 
     <section id="approach" className="belief section container"><div className="section-side"><span className="rule-label">สิ่งที่เราเชื่อ</span></div><div><h2><span className="headline-phrase">วัยอนุบาลไม่ใช่ช่วงที่ต้องรีบ</span>{' '}<span className="headline-phrase">แต่เป็นช่วงที่ต้องวางพื้นฐานให้ดี</span></h2><p className="large-copy">เมื่อเด็กได้ใช้เวลาเล่น สำรวจ ลองผิดลองถูก และเรียนรู้ร่วมกับคนรอบตัว สิ่งสำคัญค่อย ๆ เติบโตไปพร้อมกับเขา</p></div></section>
 
-    <section className="promises"><div className="container"><div className="promise-heading"><p>ที่มิตรอุดม เราอยากให้ทุกวันของเด็กเป็นวันที่...</p><h2>HAPPY <span>•</span> CARED <span>•</span> SAFE <span>•</span> READY</h2></div><div className="promise-list">{promises.map((item) => <div key={item.word}><span>{item.word}</span><h3>{item.th}</h3><p>{item.text}</p></div>)}</div></div></section>
+    <section className="promises section"><div className="container promises-layout"><div className="promises-copy"><div className="promise-heading"><p>HAPPY <span>•</span> CARED <span>•</span> SAFE <span>•</span> READY</p><h2>ความสุข การดูแล ความปลอดภัย และความพร้อม — ทุกด้านเติบโตไปด้วยกัน</h2></div><div className="promise-list">{promises.map((item) => <div key={item.word}><span>{item.word}</span><h3>{item.th}</h3><p>{item.text}</p></div>)}</div></div><div className="promise-photo"><Image src="/images/home/happy-learning.png" alt="เด็ก ๆ ยิ้มและยกมือที่แต้มสีจากกิจกรรมการเรียนรู้ร่วมกัน" fill sizes="(min-width: 901px) 55vw, 100vw" /></div></div></section>
 
     <section id="learning" className="story section container"><div className="story-media"><PhotoSlot ratio="portrait" label="การเรียนรู้" description="เด็กกำลังทดลอง สร้าง หรือทำกิจกรรมด้วยตัวเอง" /></div><div className="story-copy"><span className="rule-label">การเรียนรู้ที่มีความหมาย</span><h2><span className="headline-phrase">เมื่อเด็กได้ลอง <span className="phrase-together">ได้คิด</span> <span className="phrase-together">และได้ทำ</span></span>{' '}<span className="headline-phrase"><span className="phrase-together">การเรียนรู้</span>จึงมีความหมาย</span></h2><p>เด็กได้ตั้งคำถาม ทดลอง แก้ปัญหา และสร้างสรรค์ผ่านการลงมือทำ ก่อนค้นพบคำตอบด้วยตัวเอง</p></div></section>
 
